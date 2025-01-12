@@ -7,9 +7,8 @@ import time
 import tkinter as tk
 import logging
 import argparse
-import ctypes
 
-#---------- make enabling and disabling debug logs ----------------------------
+#---------- enabling and disabling debug logs ---------------------------------
 parser = argparse.ArgumentParser()
 
 parser.add_argument('-v', '--Verbose', action='store_true')
@@ -52,6 +51,7 @@ img = None  # initially only need a canvas image place-holder
 image_id = canvas.create_image(1057/2, 999/2, image=img)
 canvas.pack()
 
+#---------- make the whole window movable -------------------------------------
 def start_move(event):
     root.x = event.x
     root.y = event.y
